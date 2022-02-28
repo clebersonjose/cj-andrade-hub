@@ -1,6 +1,6 @@
 import { faGithubSquare, faInstagramSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
+import IconWithName from './IconWithName';
 
 const FooterStyle = styled.footer`
   display: flex;
@@ -10,25 +10,19 @@ const FooterStyle = styled.footer`
   justify-content: center;
 `;
 
-const Icon = styled(FontAwesomeIcon)`
-  line-height: 30px;
-  font-size: 30px;
-  color: #000;
-`;
-
 export default function Footer() {
   return (
     <FooterStyle>
       <a href="https://github.com/clebersonjose" target="_blank" rel="noreferrer">
-        <Icon icon={faGithubSquare} />
+        <IconWithName icon={faGithubSquare} name="Github" />
       </a>
 
       <a href="https://www.linkedin.com/in/clebersonandrade/" target="_blank" rel="noreferrer">
-        <Icon icon={faLinkedin} />
+        <IconWithName icon={faLinkedin} name="Linkedin" />
       </a>
 
       <a href="https://www.instagram.com/cleber.png/" target="_black" rel="noreferrer">
-        <Icon icon={faInstagramSquare} />
+        <IconWithName icon={faInstagramSquare} name="Instagram" />
       </a>
     </FooterStyle>
   );

@@ -5,15 +5,15 @@ import DomainLink from '../src/infra/components/DomainLink';
 import DomainHead from '../src/infra/components/DomainHead';
 import { PrimaryButton, SecondaryButton } from '../src/components/Button';
 import Footer from '../src/layouts/Footer';
-import Header from '../src/layouts/Header';
 
-const Content = styled.div`
+const Content = styled.section`
   width: 100vw;
   min-height: 100vh;
   display: grid;
-  grid-template-rows: max-content auto max-content;
+  grid-template-rows: auto max-content;
   align-items: center;
   gap: 20px;
+  padding-top: 50px;
 `;
 
 const Main = styled.main`
@@ -29,7 +29,7 @@ const Main = styled.main`
   }
 `;
 
-const NavActions = styled.div`
+const NavActions = styled.nav`
   display: flex;
   gap: 20px;
 
@@ -45,7 +45,6 @@ export default function Home() {
         <title>Cléberson J. Andrade</title>
       </DomainHead>
       <Content>
-        <Header />
         <Main>
           <section>
             <ArticleHeader
