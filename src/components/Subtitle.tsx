@@ -1,5 +1,5 @@
-import { ElementType } from "react";
-import styled from "styled-components";
+import { ElementType } from 'react';
+import styled from 'styled-components';
 
 const StyleSubtitle = styled.h2`
   font-size: 2.4em;
@@ -8,14 +8,12 @@ const StyleSubtitle = styled.h2`
   font-weight: 500;
 `;
 
-const Subtitle = ({ children, tag }: {children: string, tag: ElementType}) => {
+export default function Subtitle({ children, tag }: {children: string, tag?: ElementType}) {
   return (
     <StyleSubtitle as={tag}>{children}</StyleSubtitle>
-  )
+  );
 }
 
 Subtitle.defaultProps = {
-  tag: "h2"
-}
-
-export default Subtitle;
+  tag: 'h2',
+};

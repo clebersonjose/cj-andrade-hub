@@ -1,9 +1,7 @@
-import Head from "next/head";
+import Head from 'next/head';
 
-const DomainHead = ({ children }: { children: any }) => {
+export default function DomainHead({ children }: { children: any }) {
   return (
     <Head>{children}</Head>
-  )
+  );
 }
-
-export default DomainHead;

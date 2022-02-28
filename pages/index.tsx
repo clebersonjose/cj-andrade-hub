@@ -1,12 +1,11 @@
-import type { NextPage } from 'next';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithubSquare, faInstagramSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import Text from '../src/components/Text';
 import ArticleHeader from '../src/layouts/ArticleHeader';
 import DomainLink from '../src/infra/components/DomainLink';
 import DomainHead from '../src/infra/components/DomainHead';
 import { PrimaryButton, SecondaryButton } from '../src/components/Button';
+import Footer from '../src/layouts/Footer';
+import Header from '../src/layouts/Header';
 
 const Content = styled.div`
   width: 100vw;
@@ -14,6 +13,7 @@ const Content = styled.div`
   display: grid;
   grid-template-rows: max-content auto max-content;
   align-items: center;
+  gap: 20px;
 `;
 
 const Main = styled.main`
@@ -38,28 +38,14 @@ const NavActions = styled.div`
   }
 `;
 
-const Footer = styled.footer`
-  display: flex;
-  padding: 10px 20px;
-  gap: 20px;
-  background-color: #EDEDED;
-  justify-content: center;
-`;
-
-const Icon = styled(FontAwesomeIcon)`
-  line-height: 30px;
-  font-size: 30px;
-  color: #000;
-`;
-
-const Home: NextPage = () => {
+export default function Home() {
   return (
     <>
       <DomainHead>
         <title>Cléberson J. Andrade</title>
       </DomainHead>
       <Content>
-        <header></header>
+        <Header />
         <Main>
           <section>
             <ArticleHeader
@@ -68,7 +54,9 @@ const Home: NextPage = () => {
             />
 
             <Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pulvinar tortor convallis dolor ultricies, nec mattis lorem mattis. In eu facilisis mauris.
+              Lorem ipsum dolor sit amei, consectetur adipiscing elit. Pellentesque
+              pulvinar tortor convallis dolor ultricies, nec mattis lorem mattis.
+              In eu facilisis mauris.
             </Text>
 
             <NavActions>
@@ -83,22 +71,8 @@ const Home: NextPage = () => {
           </section>
         </Main>
 
-        <Footer>
-          <a href="https://github.com/clebersonjose" target='_blank' rel="noreferrer">
-            <Icon icon={faGithubSquare} />
-          </a>
-
-          <a href="https://www.linkedin.com/in/clebersonandrade/" target='_blank' rel="noreferrer">
-            <Icon icon={faLinkedin} />
-          </a>
-
-          <a href="https://www.instagram.com/cleber.png/" target='_black' rel="noreferrer">
-            <Icon icon={faInstagramSquare} />
-          </a>
-        </Footer>
+        <Footer />
       </Content>
     </>
-  )
+  );
 }
-
-export default Home

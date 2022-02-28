@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Button = styled.button`
   padding: 10px 20px;
@@ -13,7 +13,7 @@ const Button = styled.button`
 `;
 
 export const PrimaryButton = styled(Button)`
-  background-color: #645394;
+  background-color: ${({ theme }) => theme.themeColor};
   color: #fff;
 `;
 

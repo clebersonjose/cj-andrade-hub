@@ -1,11 +1,5 @@
-import { NextPage } from "next";
-
-const Projetos: NextPage = () => {
+export default function Projetos() {
   return (
-    <>
-      <h1>Projetos</h1>
-    </>
-  )
+    <h1>Projetos</h1>
+  );
 }
-
-export default Projetos;

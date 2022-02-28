@@ -1,5 +1,5 @@
-import { ElementType } from "react";
-import styled from "styled-components";
+import { ElementType } from 'react';
+import styled from 'styled-components';
 
 const StyleText = styled.p`
   font-size: 1.8em;
@@ -8,14 +8,12 @@ const StyleText = styled.p`
   margin-bottom: 20px;
 `;
 
-const Text = ({ children, tag }: { children: string, tag: ElementType }) => {
+export default function Text({ children, tag }: { children: string, tag?: ElementType }) {
   return (
     <StyleText as={tag}>{children}</StyleText>
-  )
-};
+  );
+}
 
 Text.defaultProps = {
-  tag: "p"
+  tag: 'p',
 };
-
-export default Text;
