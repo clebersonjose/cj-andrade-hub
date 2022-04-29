@@ -4,3 +4,5 @@
 yarn lintp
 yarn lint
 yarn auditf
+yarn build
+yarn build-storybook
