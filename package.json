@@ -10,11 +10,6 @@
     "lintp": "prettier --write .",
     "auditf": "yarn-audit-fix"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn run auditf && yarn run lintp && yarn run lint"
-    }
-  },
   "dependencies": {
     "next": "12.1.5",
     "react": "18.1.0",
