@@ -7,3 +7,11 @@ export const parameters = {
     }
   }
 };
+
+export const decorators = [
+  (Story) => (
+    <html style={{ fontSize: '10px' }}>
+      <Story />
+    </html>
+  )
+];

@@ -9,5 +9,6 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
     },
+    "px-to-rem.px-per-rem": 10
   }
 }

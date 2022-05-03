@@ -1,8 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn lintp
 yarn lint
 yarn auditf
-yarn build
-yarn build-storybook
