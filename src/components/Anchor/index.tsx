@@ -1,8 +1,18 @@
-import styled from 'styled-components';
+import Link from 'next/link';
+import { AnchorProps } from './interfaces';
+import AnchorStyle from './styles';
 
-const Anchor = styled.a`
-  color: unset;
-  text-decoration: unset;
-`;
+const Anchor = ({
+  href, children, target, rel,
+}: AnchorProps) => (
+  <Link href={href} passHref>
+    <AnchorStyle target={target} rel={rel}>{children}</AnchorStyle>
+  </Link>
+);
+
+Anchor.defaultProps = {
+  target: '_self',
+  rel: '',
+};
 
 export default Anchor;
