@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import Default from '../src/themes/default';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -14,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <>
+  <ThemeProvider theme={Default}>
     <GlobalStyle />
 
     <Head>
@@ -23,7 +24,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
 
     {/* eslint-disable-next-line react/jsx-props-no-spreading */}
     <Component {...pageProps} />
-  </>
+  </ThemeProvider>
 );
 
 export default MyApp;
