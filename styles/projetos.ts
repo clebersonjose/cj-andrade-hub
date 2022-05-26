@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import Subtitle from "../src/components/Subtitle";
-import Title from "../src/components/Title";
+import styled from 'styled-components';
+import Subtitle from '../src/components/Subtitle';
+import Title from '../src/components/Title';
 
-export const ProjetosContent = styled.main`
+const ProjetosContent = styled.main`
   display: grid;
   grid-template-rows: max-content auto max-content;
   align-items: center;
@@ -15,3 +15,5 @@ export const ProjetosContent = styled.main`
     text-align: center;
   }
 `;
+
+export default ProjetosContent;

@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const HeaderConitaner = styled.header`
+const HeaderConitaner = styled.header`
   display: flex;
   align-items: center;
   padding: 1rem 2rem;
@@ -8,3 +8,5 @@ export const HeaderConitaner = styled.header`
   width: 100%;
   box-sizing: border-box;
 `;
+
+export default HeaderConitaner;
