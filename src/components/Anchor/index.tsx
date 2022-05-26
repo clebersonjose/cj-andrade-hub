@@ -12,7 +12,6 @@ const Anchor = ({
 
 Anchor.defaultProps = {
   target: '_self',
-  rel: '',
 };
 
 export default Anchor;
