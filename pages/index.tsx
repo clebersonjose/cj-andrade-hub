@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Anchor from '../src/components/Anchor';
 import Button from '../src/components/Button';
 import Text from '../src/components/Text';
 import Footer from '../src/layouts/Footer';
@@ -20,7 +21,9 @@ const Home: NextPage = () => (
       </Text>
 
       <HomeNavActions>
-        <Button type="Outline">Projetos</Button>
+        <Anchor href="/projetos">
+          <Button type="Outline">Projetos</Button>
+        </Anchor>
 
         <Button>Contato</Button>
       </HomeNavActions>

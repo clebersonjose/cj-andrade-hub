@@ -13,7 +13,7 @@ const Footer = () => (
       <IconWithLabel icon={faLinkedin} label="LinkedIn" />
     </Anchor>
 
-    <Anchor href="https://www.instagram.com/cleber.png/" target="_black" rel="noreferrer">
+    <Anchor href="https://www.instagram.com/cleber.png/" target="_blank" rel="noreferrer">
       <IconWithLabel icon={faInstagramSquare} label="Instagram" />
     </Anchor>
   </FooterContainer>

@@ -7,6 +7,8 @@ const FooterContainer = styled.footer`
   justify-content: center;
   gap: 2rem;
   background-color: #EDEDED;
+  width: 100%;
+  box-sizing: border-box;
 `;
 
 export default FooterContainer;
