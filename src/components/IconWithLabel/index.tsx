@@ -1,5 +1,5 @@
 import { IconWithLabelProps } from './interfaces';
-import { IconWithLabelContainer, Icon, IconLabel } from './styles';
+import { Icon, IconLabel, IconWithLabelContainer } from './styles';
 
 const IconWithLabel = ({ icon, label }: IconWithLabelProps) => (
   <IconWithLabelContainer>
