@@ -1,10 +1,23 @@
 import { ButtonProps } from './interfaces';
-import { Default, Outline } from './styles';
+import {
+  Default,
+  Icon,
+  Outline,
+  Text,
+} from './styles';
 
-const Button = ({ type, children }: ButtonProps) => {
-  const Component = type === 'Outline' ? Outline : Default;
+const Button = ({
+  type, children, icon, onClick,
+}: ButtonProps) => {
+  const components = { Default, Outline, Text };
+  const Component = components[`${type}`];
 
-  return <Component>{children}</Component>;
+  return (
+    <Component onClick={onClick}>
+      {icon && <Icon icon={icon} />}
+      {children}
+    </Component>
+  );
 };
 
 Button.defaultProps = {
