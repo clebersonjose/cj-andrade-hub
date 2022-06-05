@@ -1,5 +1,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const rotate = keyframes`
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+export const Icon = styled(FontAwesomeIcon)`
+  width: 2.5rem;
+  height: 2.5rem;
+`;
 
 export const Default = styled.button`
   padding: 1rem 2rem;
@@ -17,6 +28,16 @@ export const Default = styled.button`
   justify-content: center;
   align-items: center;
   gap: 1rem;
+
+  &.loading {
+    ${Icon} {
+      animation: ${rotate} 2s linear infinite;
+    }
+  }
+
+  &:disabled {
+    opacity: .5;
+  }
 `;
 
 export const Outline = styled(Default)`
@@ -39,9 +60,4 @@ export const Text = styled.button`
   justify-content: center;
   align-items: center;
   gap: 1rem;
-`;
-
-export const Icon = styled(FontAwesomeIcon)`
-  width: 2.5rem;
-  height: 2.5rem;
 `;
