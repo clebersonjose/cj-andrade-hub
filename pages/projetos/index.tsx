@@ -7,7 +7,14 @@ import ProjetosContent from '../../styles/projetos';
 const Projetos: NextPage = () => (
   <ProjetosContent>
     <Header />
-    <TitleWithSubtitle title="Projetos" subtitle="Sem projetos no momentos" />
+
+    <main>
+      <TitleWithSubtitle
+        title="Projetos"
+        subtitle="Sem projetos no momentos"
+      />
+    </main>
+
     <Footer />
   </ProjetosContent>
 );
