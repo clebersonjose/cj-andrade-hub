@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
 import { FormEvent, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import Head from 'next/head';
 import Button from '../../src/components/Button';
 import Input from '../../src/components/Input';
 import TextArea from '../../src/components/TextArea';
@@ -76,59 +77,64 @@ const Contato: NextPage = () => {
   };
 
   return (
-    <ContatoContent>
-      <Header />
-      {messages.length > 0 && (<CardsMessages />)}
-      <ContatoMain>
-        <Title>Contato</Title>
+    <>
+      <Head>
+        <title>Contato | CJ Andrade</title>
+      </Head>
+      <ContatoContent>
+        <Header />
+        {messages.length > 0 && (<CardsMessages />)}
+        <ContatoMain>
+          <Title>Contato</Title>
 
-        <ContatoForm onSubmit={(event) => handleSubmit(event)}>
-          <Input
-            label="Nome:"
-            name="name"
-            type="text"
-            placeholder="Seu nome completo aqui..."
-            required
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-          />
+          <ContatoForm onSubmit={(event) => handleSubmit(event)}>
+            <Input
+              label="Nome:"
+              name="name"
+              type="text"
+              placeholder="Seu nome completo aqui..."
+              required
+              value={name}
+              onChange={(event) => setName(event.target.value)}
+            />
 
-          <Input
-            label="E-mail:"
-            name="email"
-            type="email"
-            placeholder="Seu e-mail aqui..."
-            required
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-          />
+            <Input
+              label="E-mail:"
+              name="email"
+              type="email"
+              placeholder="Seu e-mail aqui..."
+              required
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+            />
 
-          <Input
-            label="Titulo da mensagem:"
-            name="titulo"
-            type="text"
-            placeholder="Titulo da mensagem..."
-            required
-            value={tituloDaMessage}
-            onChange={(event) => setTituloDaMessage(event.target.value)}
-          />
+            <Input
+              label="Titulo da mensagem:"
+              name="titulo"
+              type="text"
+              placeholder="Titulo da mensagem..."
+              required
+              value={tituloDaMessage}
+              onChange={(event) => setTituloDaMessage(event.target.value)}
+            />
 
-          <TextArea
-            label="Texto da mensagem:"
-            name="mensagem"
-            placeholder="Mensagem aqui..."
-            required
-            onChange={(event) => setMessage(event.target.value)}
-            value={message}
-          />
+            <TextArea
+              label="Texto da mensagem:"
+              name="mensagem"
+              placeholder="Mensagem aqui..."
+              required
+              onChange={(event) => setMessage(event.target.value)}
+              value={message}
+            />
 
-          <Button type="submit" loading={loading}>
-            Enviar mensagem
-          </Button>
-        </ContatoForm>
-      </ContatoMain>
-      <Footer />
-    </ContatoContent>
+            <Button type="submit" loading={loading}>
+              Enviar mensagem
+            </Button>
+          </ContatoForm>
+        </ContatoMain>
+        <Footer />
+      </ContatoContent>
+    </>
   );
 };
 
