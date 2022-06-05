@@ -22,10 +22,12 @@ const Home: NextPage = () => (
 
       <HomeNavActions>
         <Anchor href="/projetos">
-          <Button type="Outline">Projetos</Button>
+          <Button layout="Outline">Projetos</Button>
         </Anchor>
 
-        <Button>Contato</Button>
+        <Anchor href="/contato">
+          <Button>Contato</Button>
+        </Anchor>
       </HomeNavActions>
     </HomeContent>
 
