@@ -12,6 +12,7 @@ const Text = styled.p`
 
   @media (max-width: ${({ theme }) => theme.size.mobile}) {
     font-size: 1.4rem;
-  }`;
+  }
+`;
 
 export default Text;

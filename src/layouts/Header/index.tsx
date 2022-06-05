@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <HeaderConitaner>
-      <Button onClick={() => router.back()} type="Text" icon={faArrowLeft}>Voltar</Button>
+      <Button onClick={() => router.back()} layout="Text" icon={faArrowLeft}>Voltar</Button>
     </HeaderConitaner>
   );
 };
