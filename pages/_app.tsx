@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { MessageProvider } from '../src/contexts/messages';
 import Default from '../src/themes/default';
 
 const GlobalStyle = createGlobalStyle`
@@ -15,16 +16,18 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <ThemeProvider theme={Default}>
-    <GlobalStyle />
+  <MessageProvider>
+    <ThemeProvider theme={Default}>
+      <GlobalStyle />
 
-    <Head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </Head>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
 
-    {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-    <Component {...pageProps} />
-  </ThemeProvider>
+      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+      <Component {...pageProps} />
+    </ThemeProvider>
+  </MessageProvider>
 );
 
 export default MyApp;
