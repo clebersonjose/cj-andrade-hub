@@ -1,0 +1,4 @@
+build/*
+**/stories
+node_modules
+**/*.html
